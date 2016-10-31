@@ -1,9 +1,12 @@
 *.iml
 .gradle
 /local.properties
-/.idea/workspace.xml
-/.idea/libraries
 .DS_Store
 /build
 /captures
 .externalNativeBuild
+/keys.gradle
+.idea/
+mobile/libs/
+wear/libs/
+wear/src/main/res/drawable/
