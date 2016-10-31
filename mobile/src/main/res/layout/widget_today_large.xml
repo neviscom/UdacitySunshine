@@ -14,17 +14,18 @@
      limitations under the License.
 -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="@dimen/widget_margin">
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:padding="@dimen/widget_margin">
 
     <RelativeLayout
         android:id="@+id/widget"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/touch_selector_white"
-        android:padding="8dp">
+        android:padding="8dp"
+        tools:ignore="UselessParent">
 
         <ImageView
             android:id="@+id/widget_icon"
@@ -32,7 +33,8 @@
             android:layout_height="match_parent"
             android:layout_centerVertical="true"
             android:scaleType="centerInside"
-            tools:src="@drawable/art_clear" />
+            tools:ignore="ContentDescription"
+            tools:src="@drawable/art_clear"/>
 
         <TextView
             android:id="@+id/widget_description"
@@ -40,24 +42,22 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@id/widget_icon"
-            android:layout_toRightOf="@id/widget_icon"
             android:fontFamily="sans-serif-condensed"
-            android:paddingLeft="16dp"
             android:paddingStart="16dp"
             android:textAppearance="?android:textAppearanceLarge"
             android:textColor="@color/primary_text"
-            tools:text="Clear" />
+            tools:ignore="RelativeOverlap,RtlSymmetry"
+            tools:text="Clear"/>
 
         <TextView
             android:id="@+id/widget_low_temperature"
             android:layout_width="@dimen/forecast_text_width"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_centerVertical="true"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:gravity="end"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center"
             android:fontFamily="sans-serif-light"
+            android:gravity="end"
             android:textColor="@color/forecast_low_text"
             android:textSize="@dimen/forecast_text_size"
             tools:text="7"/>
@@ -66,14 +66,12 @@
             android:id="@+id/widget_high_temperature"
             android:layout_width="@dimen/forecast_text_width"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_centerVertical="true"
-            android:gravity="end"
-            android:layout_toLeftOf="@id/widget_low_temperature"
-            android:layout_toStartOf="@id/widget_low_temperature"
-            android:layout_marginRight="@dimen/forecast_temperature_space"
+            android:layout_gravity="center"
             android:layout_marginEnd="@dimen/forecast_temperature_space"
+            android:layout_toStartOf="@id/widget_low_temperature"
             android:fontFamily="sans-serif-light"
+            android:gravity="end"
             android:textColor="@color/primary_text"
             android:textSize="@dimen/forecast_text_size"
             tools:text="10"/>
